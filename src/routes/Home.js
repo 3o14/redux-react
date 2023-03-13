@@ -5,9 +5,13 @@ import Todo from "../components/Todo";
 
 function Home({ todos, addTodo }) {
   const [text, setText] = useState("");
+
+  // 투두입력창 변화시 반응(텍스트 입력시 text에 저장)
   function onChange(e) {
     setText(e.target.value);
   }
+
+  // 투두 추가 클릭시 addTodo에 투두(text)전달
   function onSubmit(e) {
     e.preventDefault();
     addTodo(text);
